@@ -1,10 +1,11 @@
 import { Equal, Expect } from "../helpers/type-utils";
+import {Z} from "vitest/dist/types-ad1c3f45";
 
 type BreadType = "rye" | "brown" | "white";
 
 type Filling = "cheese" | "ham" | "salami";
 
-type Sandwich = unknown;
+type Sandwich =  `${BreadType} sandwich with ${Filling}`
 
 type tests = [
   Expect<
